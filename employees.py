@@ -122,10 +122,13 @@ class Employee(ABC):
 
     def __str__(self):
         '''To string method'''
-        return f"{self.name}\n\tSalary: ${self.salary}\n\tSavings: ${self.savings}\n\tHappiness: {self.happiness}%\n\tPerformance: {self.performance}%"
-        # output = [f"{self.name}\n\tSalary: ${self.salary}\n\tSavings:",
-        #    f"${self.savings}\n\tHappiness: {self.happiness}%\n\tPerformance: {self.performance}%"]
-        # return (''.join(output))
+        return (
+            f"{self.name}\n"
+            f"\tSalary: ${self.salary}\n"
+            f"\tSavings: ${self.savings}\n"
+            f"\tHappiness: {self.happiness}%\n"
+            f"\tPerformance: {self.performance}%"
+        )
 
 class Manager(Employee):
     """
